@@ -102,7 +102,7 @@ bool SceneNode::Intersects(const Ray& ray, const glm::mat4& parentTransform, flo
     return localRay.intersectsAABB(m_localMin, m_localMax, outDistance);
 }
 
-
+// Checks the hit, try and fix this if able, too far from objects and the rays seemingly choose whatever direction at random 
 void SceneNode::CheckRayHit(const Ray& ray, const glm::mat4& parentTransform,
     SceneNode*& closestNode, float& closestDistance) {
     glm::mat4 model = parentTransform;
